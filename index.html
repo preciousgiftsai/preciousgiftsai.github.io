@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WPDRFSX1H6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WPDRFSX1H6');
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PreciousGifts.AI - Create Precious Collages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .header-text {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.2;
+            font-family: 'Arial', sans-serif;
+        }
+        .contact-link {
+            display: inline-block;
+            padding: 10px 20px;
+            color: black;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .contact-link:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+        .try-it-out {
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 25px;
+            font-size: 25px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .try-it-out:hover {
+            background-color: #6495ED;
+            transform: translateX(-50%) scale(1.05);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Media query for mobile devices */
+        @media screen and (max-width: 768px) {
+            .try-it-out {
+                padding: 12px 20px;
+                font-size: 20px;
+                width: 80%;
+                max-width: 300px;
+                top: 75%;
+                text-align: center;
+                white-space: nowrap;
+            }
+        }
+
+        /* Media query for very small devices */
+        @media screen and (max-width: 380px) {
+            .try-it-out {
+                padding: 10px 16px;
+                font-size: 18px;
+                width: 90%;
+            }
+        }
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  z-index: 10;
+  padding: 10px; /* Add padding to increase tap target size */
+  transition: color 0.2s ease; /* Smooth color transition on hover */
+}
+
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .arrow {
+    font-size: 30px;
+    padding: 2px;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: rgba(0, 0, 0, 0.7);
+    border-radius: 30%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: color 0.2s ease; /* Smooth color transition on hover */
+}
+  .prev {
+    left: -25px;
+  }
+  .next {
+    right: -25px;
+  }
+  .arrow:hover {
+    color: #0056b3;
+    background-color: white;
+  }
+}
+
+.arrow:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+        .carousel-container {
+            position: relative;
+            margin-left: 5%;
+            margin-top: 2%;
+            width: 90%;
+            height: calc(100vh - 300px);
+            overflow: hidden;
+            background-color: white;
+            color: white;
+        }
+
+        /* Media query for mobile devices */
+        @media screen and (max-width: 768px) {
+            .carousel-container {
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+                margin-top: 0;
+                height: calc(100vh - 400px);
+                overflow: visible;
+            }
+        }
+
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            color: white;
+        }
+        .carousel-slide.active {
+            opacity: 1;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            border: 2px solid rgba(0, 0, 0, 0.5);
+        }
+        .dot.active {
+            background-color: rgba(0, 0, 0, 0.7);
+            border-color: rgba(0, 0, 0, 0.8);
+        }
+        .video-element {
+  width: 100%;
+  height: 120%;
+  object-fit: contain;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-text">
+            Precious Gifts
+        </div>
+        <a href="https://preciousgifts-f8b2314bfe1a.herokuapp.com/contact.html" class="contact-link">Contact Us</a>
+    </header>
+
+    <div class="carousel-container">
+            <div class="carousel-slide active">
+            <img src="static/paris.gif" alt="All trip pics into one frame">
+        </div>
+        <div class="carousel-slide">
+            <img src="static/baby.gif" alt="Get your special moments of a favorite family member in one frame">
+        </div>
+        <div class="carousel-slide">
+            <img src="static/more_examples.jpeg" alt="Image 3">
+        </div>
+        <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+        <div class="carousel-arrows">
+    <button class="arrow prev">&lsaquo;</button>
+    <button class="arrow next">&rsaquo;</button>
+</div>
+    </div>
+    <a href="https://preciousgifts-f8b2314bfe1a.herokuapp.com/main.html">
+        <button class="try-it-out">Create My Own</button>
+            </a>
+
+    <script>
+    const slides = document.querySelectorAll('.carousel-slide');
+       const dots = document.querySelectorAll('.dot');
+       const prevArrow = document.querySelector('.arrow.prev');
+    const nextArrow = document.querySelector('.arrow.next');
+        let currentSlide = 0;
+        let autoSlideInterval;
+
+        function showSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+function nextSlide() {
+            let next = (currentSlide + 1) % slides.length;
+            showSlide(next);
+        }
+
+setInterval(nextSlide, 18000); // Change slide every 5 seconds
+
+ // Add click event for manual navigation using dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+
+function prevSlide() {
+  let prev = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(prev);
+}
+
+
+function startAutoSlide() {
+  autoSlideInterval = setInterval(nextSlide, 18000);
+}
+
+function stopAutoSlide() {
+  clearInterval(autoSlideInterval);
+}
+
+
+function handleNavigation(action) {
+  stopAutoSlide();
+    action();
+  startAutoSlide();
+}
+
+
+// Arrow navigation
+nextArrow.addEventListener('click', () => handleNavigation(nextSlide));
+prevArrow.addEventListener('click', () => handleNavigation(prevSlide));
+
+    </script>
+</body>
+</html>
